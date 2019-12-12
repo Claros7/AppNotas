@@ -4,16 +4,16 @@
 
     <item
         android:id="@+id/action_opciones"
-        android:title="Opciones"/>
+        android:title="@string/opciones"/>
     <item
         android:id="@+id/app_bar_buscar"
         android:icon="@drawable/ic_action_buscar"
-        app:showAsAction="always"
-        android:title="Buscar"
+        app:showAsAction="ifRoom"
+        android:title="@string/buscar"
         app:actionViewClass="android.widget.SearchView"/>
     <item
         android:id="@+id/addNote"
-        android:title="Agregar Nota"
+        android:title="@string/agregar_nota"
         android:icon="@drawable/ic_action_agregar"
         app:showAsAction="always"/>
 

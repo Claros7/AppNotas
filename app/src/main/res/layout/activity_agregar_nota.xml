@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".AgregarNotaActivity">
 
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -25,27 +26,31 @@
                 <EditText
                     android:id="@+id/titleEt"
                     android:background="@null"
-                    android:hint="Ingrese El Título"
+                    android:hint="@string/ingrese_el_t_tulo"
                     android:singleLine="true"
                     android:padding="10dp"
                     android:textStyle="bold"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content"
+                    android:importantForAutofill="no"
+                    android:inputType="text" />
                 <EditText
                     android:id="@+id/descEt"
                     android:background="@null"
                     android:gravity="top"
-                    android:hint="Ingrese La Descripción..."
+                    android:hint="@string/ingrese_la_descripcion"
                     android:minHeight="100dp"
                     android:padding="10dp"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content"
+                    android:importantForAutofill="no"
+                    android:inputType="text" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
         <Button
             android:id="@+id/addBtn"
             style="@style/Base.Widget.AppCompat.Button.Colored"
-            android:text="Add"
+            android:text="Agregar"
             android:layout_gravity="end"
             android:layout_marginEnd="5dp"
             android:layout_width="wrap_content"

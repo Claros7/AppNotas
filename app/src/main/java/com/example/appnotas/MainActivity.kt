@@ -5,21 +5,20 @@ import android.app.SearchManager
 import android.content.ClipboardManager
 import android.content.Context
 import android.content.Intent
-import android.icu.text.CaseMap
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.PersistableBundle
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.row.*
 import kotlinx.android.synthetic.main.row.view.*
 
+
+@Suppress("DEPRECATION")
 class MainActivity : AppCompatActivity() {
 
     var listNotes = ArrayList<Nota>()
@@ -75,12 +74,12 @@ class MainActivity : AppCompatActivity() {
         sv.setSearchableInfo(sm.getSearchableInfo(componentName))
         sv.setOnQueryTextListener(object: SearchView.OnQueryTextListener{
             override fun onQueryTextSubmit(query: String?): Boolean {
-                LoadQuery("%"+query+"%")
+                LoadQuery("%$query%")
                 return false
             }
 
             override fun onQueryTextChange(newText: String?): Boolean {
-                LoadQuery("%"+newText+"%")
+                LoadQuery("%$newText%")
                 return false
             }
         })
@@ -112,7 +111,7 @@ class MainActivity : AppCompatActivity() {
             myView.titleTv.text = myNota.nodeName
             myView.descTV.text = myNota.nodeDes
             myView.borrarBtn.setOnClickListener {
-                var dbManager = DbManager(this.context!!)
+                val dbManager = DbManager(this.context!!)
                 val selectionArgs = arrayOf(myNota.nodeID.toString())
                 dbManager.delete("ID=?", selectionArgs)
                 LoadQuery("%")

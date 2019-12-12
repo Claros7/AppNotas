@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">AppNotas</string>
+    <string name="ingrese_la_descripcion">Ingrese La Descripción...</string>
+    <string name="add">Add</string>
+    <string name="ingrese_el_t_tulo">Ingrese El Título</string>
+    <string name="t_tulo">Título</string>
+    <string name="puede_ingresar_una_descripci_n_larga_de_la_nota">puede ingresar una descripción larga de la nota</string>
+    <string name="imagen">imagen</string>
+    <string name="buscar">Buscar</string>
+    <string name="opciones">Opciones</string>
+    <string name="agregar_nota">Agregar Nota</string>
 </resources>

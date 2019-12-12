@@ -10,7 +10,7 @@ import java.lang.Exception
 
 class AgregarNotaActivity : AppCompatActivity() {
 
-    val dbTabla = "Notas"
+    val dbTable = "Notas"
     var id = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,9 +28,9 @@ class AgregarNotaActivity : AppCompatActivity() {
     }
 
     fun addFunc(view: View) {
-        var dbManager = DbManager(this)
+        val dbManager = DbManager(this)
 
-        var values = ContentValues()
+        val values = ContentValues()
         values.put("Titulo", titleEt.text.toString())
 
         if (id ==0){
@@ -44,7 +44,7 @@ class AgregarNotaActivity : AppCompatActivity() {
             }
         }
         else{
-            var selectionArgs = arrayOf(id.toString())
+            val selectionArgs = arrayOf(id.toString())
             val ID = dbManager.update(values, "ID=?", selectionArgs)
             if (ID>0){
                 Toast.makeText(this, "Nota agregada", Toast.LENGTH_SHORT).show()

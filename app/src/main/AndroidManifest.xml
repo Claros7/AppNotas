@@ -9,15 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
-            android:label="Notes List:>
+        <activity android:name=".AgregarNotaActivity"
+            android:label="Lista de notas">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".AgregarNotaActivity"
+        <activity android:name=".MainActivity"
             android:label="Agregar Nota"
             android:parentActivityName=".MainActivity"/>
     </application>
